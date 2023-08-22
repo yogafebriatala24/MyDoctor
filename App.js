@@ -1,6 +1,5 @@
-import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { GetStarted, Splash } from "./src/pages";
+import React from "react";
 import Router from "./src/router";
 
 export default function App() {
