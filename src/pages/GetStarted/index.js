@@ -1,9 +1,13 @@
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { ILGetStarted, ILLogo } from "../../../assets/ilustration";
-import { Button } from "../../components";
+import { Button, Gap } from "../../components";
+import { useFonts } from "expo-font";
 
 export default function GetStarted() {
+  const [fontsLoaded] = useFonts({
+    semibold: require("../../../assets/fonts/Nunito-SemiBold.ttf"),
+  });
   return (
     <ImageBackground source={ILGetStarted} style={styles.page}>
       <View>
@@ -14,7 +18,7 @@ export default function GetStarted() {
       </View>
       <View>
         <Button title="Get Started" />
-        <View style={{ height: 16 }} />
+        <Gap height={20} />
         <Button type="secondary" title="Sign In" />
       </View>
     </ImageBackground>
@@ -30,8 +34,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontWeight: "600",
     color: "white",
     marginTop: 91,
+    fontFamily: "semibold",
   },
 });
